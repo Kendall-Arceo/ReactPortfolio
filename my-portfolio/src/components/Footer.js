@@ -10,6 +10,24 @@ const useStyles = makeStyles({
   root: {
     width: 500,
   },
+  phantom: {
+    display: 'block',
+    padding: '20px',
+    height: '60px',
+    width: '100%',
+  },
+  style: {
+    backgroundColor: "#F8F8F8",
+    borderTop: "1px solid #E7E7E7",
+    textAlign: "center",
+    padding: "20px",
+    position: "fixed",
+    left: "0",
+    bottom: "0",
+    height: "60px",
+    width: "100%",
+}
+  
 });
 
 export default function SimpleBottomNavigation() {
@@ -23,7 +41,7 @@ export default function SimpleBottomNavigation() {
         setValue(newValue);
       }}
       showLabels
-      className={classes.root}
+      className={classes.style}
     >
       <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />

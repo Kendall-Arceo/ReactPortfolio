@@ -10,13 +10,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
   },
+
   image: {
     backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center', 
+      backgroundSize: 'cover', 
+      backgroundRepeat: 'no-repeat',
+      margin: 'auto',
+      borderRadius: 8,
+      display: 'flex',
+      
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -43,10 +46,12 @@ export default function SignInSide() {
   const classes = useStyles();
 
   return (
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Header/>
-      <Footer/>
-    </Grid>
+    <div className = {classes.image}>
+      <Grid container component="main" className={classes.root}>
+        <CssBaseline />
+        <Header/>
+        <Footer/>
+      </Grid>
+    </div>
   );
 }
