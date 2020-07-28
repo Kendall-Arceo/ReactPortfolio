@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
+import Badge from '@material-ui/core/Badge';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
@@ -23,12 +24,16 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+
   },
   appBar: {
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    opactiy: "0.5",
+    
+    
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -58,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
+    
   },
   content: {
     flexGrow: 1,
@@ -67,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
+    
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -75,6 +82,13 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
+  
 }));
 
 export default function PersistentDrawerLeft() {
@@ -109,9 +123,32 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Persistent drawer
-          </Typography>
+
+
+          <div className={classes.sectionDesktop}>
+            <IconButton  color="inherit">
+              <Badge  color="secondary">
+                <Typography>Home</Typography>
+              </Badge>
+            </IconButton>
+            <IconButton  color="inherit">
+              <Badge  color="secondary">
+              <Typography>Portfolio</Typography>
+              </Badge>
+            </IconButton>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+             
+              aria-haspopup="true"
+              //onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <Typography>Contact</Typography>
+            </IconButton>
+          </div>
+
+
         </Toolbar>
       </AppBar>
       <Drawer
