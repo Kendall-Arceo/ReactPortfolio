@@ -4,13 +4,13 @@ import Footer from '../components/Footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Avatar from '@material-ui/core/Avatar';
+import ProfileCircle from '../components/ProfileCircle'
+
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100vh',
+    height: '125vh',
   },
 
   image: {
@@ -29,22 +29,17 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-    color:"white",
-
-  },
+  profile: {
+    width: 230,
+    height: 235,
+    borderRadius: 225 / 2,
+    overflow: "hidden",
+    borderWidth: 3,
+    borderColor: "red"
+  }
 }));
 
-export default function SignInSide() {
+export default function Home() {
   const classes = useStyles();
 
   return (
@@ -52,9 +47,11 @@ export default function SignInSide() {
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
         <Header/>
-          <Container>
-          <Avatar alt="Remy Sharp" src="../utils/images/picture2.jpg" className={classes.large} />
-          </Container>
+
+          <main>
+            <ProfileCircle/>
+            
+          </main>
         <Footer/>
       </Grid>
     </div>
