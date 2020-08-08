@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     opactiy: "0.5",
+    alignItems: 'center'
     
     
   },
@@ -125,8 +126,8 @@ export default function PersistentDrawerLeft() {
           </IconButton>
 
 
-          <div className={classes.sectionDesktop}>
-            <IconButton  color="inherit">
+          <div className={classes.sectionDesktop} >
+            <IconButton  color="inherit" >
               <Badge  color="secondary">
                 <Typography>Home</Typography>
               </Badge>

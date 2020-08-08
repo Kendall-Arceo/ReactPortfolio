@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   profile: {
-    width: 230,
-    height: 235,
+    width: 220,
+    height: 240,
     borderRadius: 225 / 2,
     overflow: "hidden",
     borderWidth: 3,
@@ -34,28 +34,29 @@ export default function Profile() {
 
   return (
     <div className = {classes.image}>
-      <Grid container component="main" className={classes.root}>
-        <CssBaseline />
-        <Container maxWidth="sm">
+      <CssBaseline />
+      <Grid container direction="row" justify="center" alignItems="center" component="main" className={classes.root}>
+      
+        <Container maxWidth="lg">
           <main>
                     
             <Badge className = {classes.paper} >
               <img alt="" src={ require("../utils/images/Picture2.jpg")} color ="primary" className = {classes.profile}/>
             </Badge>
 
-            <Typography variant="h1" component="h2">
+            <Typography variant="h2" component="h1" color ="primary">
               Hi, My Name is Kendall Arceo!
             </Typography>
 
             <Paper>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-              unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
-              dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
-            </Typography>  
+              <Typography variant="body1" gutterBottom>
+                body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+                unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+                dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+              </Typography>  
             </Paper> 
           </main>
-          </Container>
+        </Container>
       </Grid>
     </div>
   );
