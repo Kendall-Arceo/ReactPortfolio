@@ -43,16 +43,14 @@ export default function Profile() {
             <Badge className = {classes.paper} >
               <img alt="" src={ require("../utils/images/Picture2.jpg")} color ="primary" className = {classes.profile}/>
             </Badge>
-
-            <Typography variant="h2" component="h1" color ="primary">
+          
+            <Typography variant="h2" component="h1" color ="primary" className = {classes.paper}>
               Hi, My Name is Kendall Arceo!
             </Typography>
 
             <Paper>
-              <Typography variant="body1" gutterBottom>
-                body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-                unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
-                dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+              <Typography variant="body1" className = {classes.paper} gutterBottom>
+              I am a Full Stack Web Developer focused on providing dynamic web experiences. I changed my career path in 2019 as web development caught my attention and has since been my passion to learn and grow within the world of coding.I am Excited to keep expanding my experience with Web Development.
               </Typography>  
             </Paper> 
           </main>

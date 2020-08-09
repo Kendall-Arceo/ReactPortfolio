@@ -18,6 +18,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import Link from '@material-ui/core/Link';
 
 const drawerWidth = 240;
 
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     opactiy: "0.5",
-    alignItems: 'center'
+    
     
     
   },
@@ -88,7 +89,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },
+    alignItems: 'center',
   },
+  toolbar: {
+    paddingRight: 24, // keep right padding when drawer closed
+  },
+  colorlink: {
+    
+
+  }
   
 }));
 
@@ -114,7 +123,8 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+        
+        <Toolbar className ={classes.toolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -129,12 +139,16 @@ export default function PersistentDrawerLeft() {
           <div className={classes.sectionDesktop} >
             <IconButton  color="inherit" >
               <Badge  color="secondary">
-                <Typography>Home</Typography>
+              <Link href = "/" variant ="body2">
+                Home 
+              </Link> 
               </Badge>
             </IconButton>
-            <IconButton  color="inherit">
-              <Badge  color="secondary">
-              <Typography>Portfolio</Typography>
+            <IconButton color ="inherit" >
+              <Badge>
+                <Link href = "/Portfolio" variant ="body2"> 
+                  Portfolio
+                </Link>
               </Badge>
             </IconButton>
             <IconButton

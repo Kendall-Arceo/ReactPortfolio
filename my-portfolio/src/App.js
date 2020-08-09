@@ -1,6 +1,6 @@
 //Main app with the landing page 
 
-import React, { useRef , useEffect} from "react";
+import React from "react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
