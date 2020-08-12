@@ -14,6 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Link from '@material-ui/core/Link';
+import ListItem from '@material-ui/core/ListItem';
 
 const drawerWidth = 240;
 
@@ -85,6 +86,8 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
     },
     alignItems: 'center',
+    justify: 'center',
+    direction: 'row',
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -177,13 +180,17 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-        <IconButton  color="inherit" >
+          <ListItem>
+           <IconButton  color="inherit" >
               <Badge >
               <Link href = "/" variant ="body2" color="inherit">
                 Home 
               </Link> 
               </Badge>
             </IconButton>
+          </ListItem>
+
+          <ListItem>
             <IconButton color ="inherit" >
               <Badge>
                 <Link href = "/Portfolio" variant ="body2" color ="inherit"> 
@@ -191,6 +198,9 @@ export default function PersistentDrawerLeft() {
                 </Link>
               </Badge>
             </IconButton>
+          </ListItem>
+
+          <ListItem>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -201,6 +211,7 @@ export default function PersistentDrawerLeft() {
             >
               <Typography>Contact</Typography>
             </IconButton>
+          </ListItem>
         </List>
         
       </Drawer>

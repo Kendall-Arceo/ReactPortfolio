@@ -5,12 +5,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import ProfileCircle from '../components/ProfileCircle'
+import Container from '@material-ui/core/Container';
 
 
 
 const useStyles = makeStyles((theme) => ({
+  
   root: {
-    height: '125vh',
+    height: '300vh',
   },
 
   image: {
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     borderRadius: 8,
     display: 'flex',
+    height: '100%',
       
   },
   paper: {
@@ -44,7 +47,7 @@ export default function Home() {
 
   return (
     <div className = {classes.image}>
-      <Grid container component="main" className={classes.root}>
+      <Container maxWidth="lg" >
         <CssBaseline />
         <Header/>
 
@@ -52,8 +55,10 @@ export default function Home() {
             <ProfileCircle/>
             
           </main>
-        <Footer/>
-      </Grid>
+        
+        
+      </Container>
+      
     </div>
   );
 }

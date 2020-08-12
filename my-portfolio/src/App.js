@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import {lightBlue, red,} from "@material-ui/core/colors";
+import Footer from "./components/Footer"
 import "./App.css";
 
 
@@ -48,12 +49,14 @@ function App (){
             </Route>
 
           </Switch>
+          <Footer/>
         </div>
       </Router>
       
       
     </React.Fragment>
   </ThemeProvider>
+ 
 
   
   );

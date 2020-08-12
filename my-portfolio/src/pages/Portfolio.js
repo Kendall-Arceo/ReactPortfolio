@@ -12,7 +12,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '125vh',
+    height: '300vh',
   },
 
   image: {
@@ -20,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center', 
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
-    margin: 'auto',
-    borderRadius: 8,
-    display: 'flex',
+    
       
   },
   paper: {
@@ -31,13 +29,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  profile: {
-    width: 230,
-    height: 235,
-    borderRadius: 225 / 2,
-    overflow: "hidden",
-    borderWidth: 3,
-    borderColor: "red"
+  
+  grid: {
+    height: '150vh',
   }
 }));
 
@@ -47,77 +41,84 @@ export default function Home() {
   return (
 
     <div className = {classes.image}>
-      <CssBaseline />
-      <Grid container component="main" className={classes.root} alignItems ="center">
+       <CssBaseline />
+      
         
-        <Header/>
-
-          <Container maxWidth="lg" >
-          <main>
-            <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
-              <Grid item xs = {6}>
-                <Typography variant="h2" component="h1" color ="primary" className = {classes.paper}>
-                  Projects
-                </Typography>
-              </Grid>
-            </Grid>
-            
-            <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
-            <Grid item xs = {10}>
-              <Typography variant="h4" className = {classes.paper} gutterBottom>
-              Some assignments and homework content throughout the course 
-              </Typography>  
-            </Grid>
-            </Grid>
-
-            <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-            </Grid>
-
-            <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-              <Grid item xs = {12} lg={4}>
-                
-                <ProjectCard/>
-                
-                
-              </Grid>
-            </Grid>
-            
+        
+        
+        <Container maxWidth="lg" >
+          <Header/>
           
-          </main>
-        </Container>
+          <Grid container direction="row" justify="center" alignItems="center" component="main" className={classes.grid}>
+            <Container maxWidth ="lg">
+              <main>
+                <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
+                  <Grid item xs = {6}>
+                    <Typography variant="h2" component="h1" color ="primary" className = {classes.paper}>
+                      Projects
+                    </Typography>
+                  </Grid>
+                </Grid>
+                
+                <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
+                  <Grid item xs = {12}>
+                    <Typography variant="h4" className = {classes.paper} gutterBottom>
+                    Some assignments and homework content throughout the course 
+                    </Typography>  
+                  </Grid>
+                </Grid>
 
-        <Footer/>
-      </Grid>
+                <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                </Grid>
+
+                <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                  <Grid item xs = {12} lg={4}>
+                    
+                    <ProjectCard/>
+                    
+                    
+                  </Grid>
+                </Grid>
+                </main>
+            </Container>
+          </Grid>  
+          
+
+          
+        </Container>
+        
+       
+      
     </div>
   );
 }

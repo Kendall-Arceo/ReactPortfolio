@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   profile: {
-    width: 220,
-    height: 240,
+    width: 225,
+    height: 260,
     borderRadius: 225 / 2,
     overflow: "hidden",
     borderWidth: 3,
