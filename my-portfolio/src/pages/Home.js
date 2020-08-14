@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import ProfileCircle from '../components/ProfileCircle'
 import Container from '@material-ui/core/Container';
@@ -12,7 +10,7 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   
   root: {
-    height: '300vh',
+    height: '100vh',
   },
 
   image: {
@@ -58,6 +56,7 @@ export default function Home() {
         
         
       </Container>
+      
       
     </div>
   );

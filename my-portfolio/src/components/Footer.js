@@ -4,13 +4,16 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
+import Grid from '@material-ui/core/Grid';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Kendall Arceo
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,22 +43,44 @@ export default function StickyFooter() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <CssBaseline />
-      <Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Sticky footer
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
-        </Typography>
-        <Typography variant="body1">Sticky footer placeholder.</Typography>
-      </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">My sticky footer can be found here.</Typography>
-          <Copyright />
+        <Grid justify="space-between" container spacing = {24}>
+          
+          <IconButton  color="inherit" >
+            <Badge >
+            <Link href = "https://www.linkedin.com/in/kendall-arceo/" variant ="body2" color="inherit">
+              LinkedIn 
+            </Link> 
+            </Badge>
+          </IconButton>
+
+          <IconButton  color="inherit" >
+            <Badge >
+            <Link href = "https://github.com/Kendall-Arceo" variant ="body2" color="inherit">
+              Github 
+            </Link> 
+            </Badge>
+          </IconButton>
+
+          <IconButton  color="inherit" >
+            <Badge >
+            <Link href = "https://stackoverflow.com/users/12494449/kendall-arceo" variant ="body2" color="inherit">
+              StackOverflow 
+            </Link> 
+            </Badge>
+          </IconButton>
+          
+          <IconButton  color="inherit" >
+            <Badge >
+              <Copyright/>
+            </Badge>
+          </IconButton>
+
+          
+        </Grid>
         </Container>
       </footer>
     </div>

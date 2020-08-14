@@ -15,6 +15,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Link from '@material-ui/core/Link';
 import ListItem from '@material-ui/core/ListItem';
+import Grid from '@material-ui/core/Grid';
+import Resume from '../utils/Resume.pdf';
 
 const drawerWidth = 240;
 
@@ -123,44 +125,52 @@ export default function PersistentDrawerLeft() {
       >
         
         <Toolbar className ={classes.toolbar}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
-
-
-          <div className={classes.sectionDesktop} >
-            <IconButton  color="inherit" >
-              <Badge >
-              <Link href = "/" variant ="body2" color="inherit">
-                Home 
-              </Link> 
-              </Badge>
-            </IconButton>
-            <IconButton color ="inherit" >
-              <Badge>
-                <Link href = "/Portfolio" variant ="body2" color ="inherit"> 
-                  Portfolio
-                </Link>
-              </Badge>
-            </IconButton>
+          <Grid justify="space-between" container spacing = {24}>
             <IconButton
-              edge="end"
-              aria-label="account of current user"
-             
-              aria-haspopup="true"
-              //onClick={handleProfileMenuOpen}
               color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              className={clsx(classes.menuButton, open && classes.hide)}
             >
-              <Typography>Contact</Typography>
+              <MenuIcon />
             </IconButton>
-          </div>
 
+
+            <div className={classes.sectionDesktop} >
+              <IconButton  color="inherit" >
+                <Badge >
+                <Link href = "/" variant ="body2" color="inherit">
+                  Home 
+                </Link> 
+                </Badge>
+              </IconButton>
+              <IconButton color ="inherit" >
+                <Badge>
+                  <Link href = "/Portfolio" variant ="body2" color ="inherit"> 
+                    Portfolio
+                  </Link>
+                </Badge>
+              </IconButton>
+              <IconButton color ="inherit" >
+                <Badge >
+                  <Link href = {Resume} variant ="body2" color ="inherit">
+                    Resume
+                  </Link>
+                </Badge>
+              </IconButton>
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+              
+                aria-haspopup="true"
+                //onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <Typography>Contact</Typography>
+              </IconButton>
+            </div>
+          </Grid>
 
         </Toolbar>
       </AppBar>
@@ -199,6 +209,14 @@ export default function PersistentDrawerLeft() {
               </Badge>
             </IconButton>
           </ListItem>
+
+          <IconButton color ="inherit" >
+            <Badge >
+              <Link href ={Resume} variant ="body1" color ="inherit">
+                Resume
+              </Link>
+            </Badge>
+          </IconButton>
 
           <ListItem>
             <IconButton

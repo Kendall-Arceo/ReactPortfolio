@@ -6,19 +6,20 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import {lightBlue, red,} from "@material-ui/core/colors";
+import {lightBlue} from "@material-ui/core/colors";
 import Footer from "./components/Footer"
 import "./App.css";
+
 
 
 function App (){
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main:lightBlue[100],
+        main:lightBlue[200],
       },
       secondary: {
-        main: red[900],
+        main: lightBlue[50],
       },
       
     },

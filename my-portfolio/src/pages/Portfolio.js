@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import ProjectCard from '../components/ProjectCard';
+import Projectone from '../components/Projectone';
+import Projecttwo from '../components/Projecttwo';
+import Projectthree from '../components/Projectthree';
+import Cardfour from '../components/Cardfour';
+import Cardfive from '../components/Cardfive';
+import Cardsix from '../components/Cardsix';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   
   grid: {
-    height: '150vh',
+    height: '135vh',
   }
 }));
 
@@ -62,7 +66,7 @@ export default function Home() {
                 
                 <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
                   <Grid item xs = {12}>
-                    <Typography variant="h4" className = {classes.paper} gutterBottom>
+                    <Typography variant="h4" color ="secondary" className = {classes.paper} gutterBottom>
                     Some assignments and homework content throughout the course 
                     </Typography>  
                   </Grid>
@@ -71,19 +75,19 @@ export default function Home() {
                 <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Projectone/>
                     
                     
                   </Grid>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Projecttwo/>
                     
                     
                   </Grid>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Projectthree/>
                     
                     
                   </Grid>
@@ -92,19 +96,19 @@ export default function Home() {
                 <Grid container direction="row" justify="center" alignItems="center" spacing ={2}>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Cardfour/>
                     
                     
                   </Grid>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Cardfive/>
                     
                     
                   </Grid>
                   <Grid item xs = {12} lg={4}>
                     
-                    <ProjectCard/>
+                    <Cardsix/>
                     
                     
                   </Grid>
