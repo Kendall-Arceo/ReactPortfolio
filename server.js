@@ -1,13 +1,50 @@
-var express = require('express')
-var path = require('path')
-var serveStatic = require('serve-static')
+const express = require('express');
+const path = require('path');
 
-var app = express()
-app.use(serveStatic(path.join(__dirname, 'dist')))
+const bodyParser = require("body-parser");
 
-// app.get('/', function (req, res) {
-//     res.render('App', {});
+
+const appstart = require("./src");
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
+// Serve static files from the React app
+app.use(appstart)
+
+// Put all API endpoints under '/api'
+// app.get('/api/passwords', (req, res) => {
+//   const count = 5;
+
+//   // Generate some passwords
+//   const passwords = Array.from(Array(count).keys()).map(i =>
+//     generatePassword(12, false)
+//   )
+
+//   // Return them as json
+//   res.json(passwords);
+
+//   console.log(`Sent ${count} passwords`);
 // });
-var port = process.env.PORT || 3000
-app.listen(port)
-console.log('server started ' + port)
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'build', 'index.html');
+    res.sendFile(index);
+});
+
+
+app.listen(PORT);
+
+console.log(`React Portfolio is listening on ${port}`);
