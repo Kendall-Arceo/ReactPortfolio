@@ -1,6 +1,8 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
+  "description": "portfolio showcasing rojects and assigments",
+  "main":"build/index.js",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
