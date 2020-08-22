@@ -12,4 +12,4 @@ import serviceWorker from "./serviceWorker";
 ReactDOM.render(<App />, document.getElementById("root"));
 serviceWorker();
 
-export default serviceWorker;
+export default App;
