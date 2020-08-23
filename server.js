@@ -40,8 +40,7 @@ app.use(appstart)
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'build', 'index.html');
-    res.sendFile(index);
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 
